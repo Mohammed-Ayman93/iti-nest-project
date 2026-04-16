@@ -10,6 +10,7 @@ import {
 import { Category } from '../../categories/entities/category.entity';
 import { OrderItem } from '../../orders/entities/order-item.entity';
 import { Review } from 'src/reviews/entities/review.entity';
+import { WishlistItem } from 'src/wishlist/entities/wishlist-item.entity';
 
 @Entity('products')
 export class Product {
@@ -46,6 +47,9 @@ export class Product {
   @UpdateDateColumn()
   updatedAt!: Date;
 
-@OneToMany(() => Review, (review) => review.product)
-reviews!: Review[];
+  @OneToMany(() => Review, (review) => review.product)
+  reviews!: Review[];
+
+  @OneToMany(() => WishlistItem, (item) => item.product)
+  wishlist!: WishlistItem[];
 }

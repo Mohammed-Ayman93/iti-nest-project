@@ -9,6 +9,7 @@ import {
 import { UserRole } from '../../../common/enums/user-role.enum';
 import { Order } from '../../orders/entities/order.entity';
 import { Review } from 'src/reviews/entities/review.entity';
+import { WishlistItem } from 'src/wishlist/entities/wishlist-item.entity';
 
 @Entity('users')
 export class User {
@@ -38,4 +39,7 @@ export class User {
 
   @OneToMany(() => Review, (review) => review.user)
   reviews!: Review[];
+
+  @OneToMany(() => WishlistItem, (item) => item.user)
+  wishlist!: WishlistItem[];
 }
