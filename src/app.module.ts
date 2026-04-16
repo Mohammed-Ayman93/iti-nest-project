@@ -8,6 +8,8 @@ import { CategoriesModule } from './modules/categories/categories.module';
 import { ProductsModule } from './modules/products/products.module';
 import { OrdersModule } from './modules/orders/orders.module';
 import { RequestLoggerMiddleware } from './common/middleware/request-logger.middleware';
+import { ReviewsModule } from './reviews/reviews.module';
+import { WishlistModule } from './wishlist/wishlist.module';
 
 @Module({
   imports: [
@@ -35,6 +37,8 @@ import { RequestLoggerMiddleware } from './common/middleware/request-logger.midd
     CategoriesModule,
     ProductsModule,
     OrdersModule,
+    ReviewsModule,
+    WishlistModule,
   ],
 })
 export class AppModule implements NestModule {
