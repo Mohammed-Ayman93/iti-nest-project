@@ -8,8 +8,8 @@ import {
 } from 'typeorm';
 import { UserRole } from '../../../common/enums/user-role.enum';
 import { Order } from '../../orders/entities/order.entity';
-import { Review } from 'src/reviews/entities/review.entity';
-import { WishlistItem } from 'src/wishlist/entities/wishlist-item.entity';
+import { Review } from 'src/modules/reviews/entities/review.entity';
+import { WishlistItem } from 'src/modules/wishlist/entities/wishlist-item.entity';
 
 @Entity('users')
 export class User {

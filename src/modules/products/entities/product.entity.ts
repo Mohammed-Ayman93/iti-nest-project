@@ -9,8 +9,8 @@ import {
 } from 'typeorm';
 import { Category } from '../../categories/entities/category.entity';
 import { OrderItem } from '../../orders/entities/order-item.entity';
-import { Review } from 'src/reviews/entities/review.entity';
-import { WishlistItem } from 'src/wishlist/entities/wishlist-item.entity';
+import { Review } from 'src/modules/reviews/entities/review.entity';
+import { WishlistItem } from 'src/modules/wishlist/entities/wishlist-item.entity';
 
 @Entity('products')
 export class Product {
